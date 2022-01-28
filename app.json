@@ -30,13 +30,4 @@
       "description": "Owner Telegram ID",
       "value": ""
     }
-  },
-  "environments": {
-    "test": {
-      "scripts": {
-        "test-setup": "python run.py",
-        "test": "python run.py"
-      }
-    }
   }
-}
