@@ -1,14 +1,15 @@
 {
-  "name": "Telegram Music Bot",
-  "description": "A Telegram bot to download music from Deezer",
-  "image": "heroku/python"
+  "name": "Small Sharp Tool",
+  "description": "This app does one little thing, and does it well.",
   "keywords": [
-    "telegram",
-    "deezer"
+    "productivity",
+    "HTML5",
+    "scalpel"
   ],
-  "repository": "https://github.com/paduhq/deegram",
-  "success_url": "https://github.com/paduhq/deegram",
-  "website": "https://github.com/paduhq/deegram",
+  "website": "https://small-sharp-tool.com/",
+  "repository": "https://github.com/scriptkiddo69/deegram",
+  "logo": "https://small-sharp-tool.com/logo.svg",
+  "success_url": "/welcome",
   "env": {
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
@@ -30,4 +31,18 @@
       "description": "Owner Telegram ID",
       "value": ""
     }
+  },
+  "image": "heroku/python",
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
   }
+}
