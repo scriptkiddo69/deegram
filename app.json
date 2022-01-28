@@ -1,6 +1,7 @@
 {
   "name": "Telegram Music Bot",
   "description": "A Telegram bot to download music from Deezer",
+  "image": "heroku/python"
   "keywords": [
     "telegram",
     "deezer"
@@ -30,11 +31,12 @@
       "value": ""
     }
   },
-  "addons": [
-  ],
-  "buildpacks": [{
-    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  }, {
-    "url": "heroku/python"
-  }]
+  "environments": {
+    "test": {
+      "scripts": {
+        "test-setup": "python run.py",
+        "test": "python run.py"
+      }
+    }
+  }
 }
